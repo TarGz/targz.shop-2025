@@ -4,6 +4,7 @@ import { glob } from 'astro/loaders';
 const artworks = defineCollection({
 	loader: glob({ pattern: '*/index.md', base: './content/artworks' }),
 	schema: z.object({
+		thumbnail: z.string(),
 		title: z.string(),
 		slug: z.string(),
 		price: z.number(),

@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/unfinished-chromatic-interplay-n-6/01.jpg
 title: "〽️ Unfinished Chromatic Interplay N°6"
 slug: unfinished-chromatic-interplay-n-6
 price: 400
@@ -13,9 +14,9 @@ reference: "2023-08-29_BS-LLWOSKAG-U"
 featured: false
 shopify_handle: "unfinished-chromatic-interplay-n-6"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/unfinished-chromatic-interplay-n-6/01.jpg
+  - /artworks/unfinished-chromatic-interplay-n-6/02.jpg
+  - /artworks/unfinished-chromatic-interplay-n-6/03.jpg
 tags: []
 ---
 

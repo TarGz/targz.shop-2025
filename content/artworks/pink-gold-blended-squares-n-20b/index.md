@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/pink-gold-blended-squares-n-20b/01.jpg
 title: "🍥 pink&gold Blended Squares N°20B"
 slug: pink-gold-blended-squares-n-20b
 price: 400
@@ -13,9 +14,9 @@ reference: "021-C_LxL_CxC2xL_CxC-1"
 featured: false
 shopify_handle: "🍥-pink-gold-blended-squares-n-20b"
 images:
-  - ./01.jpg
-  - ./02.png
-  - ./03.jpg
+  - /artworks/pink-gold-blended-squares-n-20b/01.jpg
+  - /artworks/pink-gold-blended-squares-n-20b/02.png
+  - /artworks/pink-gold-blended-squares-n-20b/03.jpg
 tags: []
 ---
 

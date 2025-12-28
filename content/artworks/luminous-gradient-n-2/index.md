@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/luminous-gradient-n-2/01.jpg
 title: "🪢 Luminous Gradient N°2"
 slug: luminous-gradient-n-2
 price: 400
@@ -13,9 +14,9 @@ reference: "2023-04-27_BS-LGZH2CRF"
 featured: false
 shopify_handle: "luminous-gradient-n-2"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/luminous-gradient-n-2/01.jpg
+  - /artworks/luminous-gradient-n-2/02.jpg
+  - /artworks/luminous-gradient-n-2/03.jpg
 tags: []
 ---
 

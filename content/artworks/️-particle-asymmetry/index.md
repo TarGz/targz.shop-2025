@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/️-particle-asymmetry/01.jpg
 title: "⚛️ Particle Asymmetry"
 slug: ️-particle-asymmetry
 price: 400
@@ -13,10 +14,10 @@ reference: "2024-03-09_BS-LTK49D8CPlotter: Custom made Pen PlotterPen: Ecoline P
 featured: false
 shopify_handle: "⚛️-particle-asymmetry"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
+  - /artworks/️-particle-asymmetry/01.jpg
+  - /artworks/️-particle-asymmetry/02.jpg
+  - /artworks/️-particle-asymmetry/03.jpg
+  - /artworks/️-particle-asymmetry/04.jpg
 tags: []
 ---
 

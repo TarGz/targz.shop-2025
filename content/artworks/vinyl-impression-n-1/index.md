@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/vinyl-impression-n-1/01.jpg
 title: "♣️ Vinyl Impression N°1"
 slug: vinyl-impression-n-1
 price: 400
@@ -13,11 +14,11 @@ reference: "2023-09-30_BS-LN6FZHBY"
 featured: false
 shopify_handle: "vinyl-impression-n-1"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
-  - ./05.jpg
+  - /artworks/vinyl-impression-n-1/01.jpg
+  - /artworks/vinyl-impression-n-1/02.jpg
+  - /artworks/vinyl-impression-n-1/03.jpg
+  - /artworks/vinyl-impression-n-1/04.jpg
+  - /artworks/vinyl-impression-n-1/05.jpg
 tags: []
 ---
 

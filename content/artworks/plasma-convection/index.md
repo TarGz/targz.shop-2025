@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/plasma-convection/01.jpg
 title: "Plasma Convection Canvas"
 slug: plasma-convection
 price: 1000
@@ -13,14 +14,14 @@ reference: "2024-06-15_BS-LXG48GI0"
 featured: false
 shopify_handle: "plasma-convection"
 images:
-  - ./01.jpg
-  - ./02.png
-  - ./03.jpg
-  - ./04.jpg
-  - ./05.png
-  - ./06.png
-  - ./07.jpg
-  - ./08.jpg
+  - /artworks/plasma-convection/01.jpg
+  - /artworks/plasma-convection/02.png
+  - /artworks/plasma-convection/03.jpg
+  - /artworks/plasma-convection/04.jpg
+  - /artworks/plasma-convection/05.png
+  - /artworks/plasma-convection/06.png
+  - /artworks/plasma-convection/07.jpg
+  - /artworks/plasma-convection/08.jpg
 tags: []
 ---
 

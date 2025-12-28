@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/green-lagoon/01.jpg
 title: "✳️ Green Lagoon"
 slug: green-lagoon
 price: 400
@@ -13,11 +14,11 @@ reference: "2024-03-24_BS-LU5KDDJPPlotter: Custom made Pen PlotterPen: Ecoline P
 featured: false
 shopify_handle: "green-lagoon"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
-  - ./05.jpg
+  - /artworks/green-lagoon/01.jpg
+  - /artworks/green-lagoon/02.jpg
+  - /artworks/green-lagoon/03.jpg
+  - /artworks/green-lagoon/04.jpg
+  - /artworks/green-lagoon/05.jpg
 tags: []
 ---
 

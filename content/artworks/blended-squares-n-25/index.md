@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/blended-squares-n-25/01.jpg
 title: "BLENDED SQUARES N°25"
 slug: blended-squares-n-25
 price: 150
@@ -13,9 +14,9 @@ reference: "025-LxL_C_CxC_L-1 - Z4 A2"
 featured: false
 shopify_handle: "blended-squares-n-25"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/blended-squares-n-25/01.jpg
+  - /artworks/blended-squares-n-25/02.jpg
+  - /artworks/blended-squares-n-25/03.jpg
 tags: []
 ---
 

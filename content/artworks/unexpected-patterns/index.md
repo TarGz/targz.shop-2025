@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/unexpected-patterns/01.jpg
 title: "🦓 Unexpected Patterns"
 slug: unexpected-patterns
 price: 100
@@ -13,9 +14,9 @@ reference: "2023-09-30_BS-LN6FZHBY-DASHED"
 featured: false
 shopify_handle: "unexpected-patterns"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/unexpected-patterns/01.jpg
+  - /artworks/unexpected-patterns/02.jpg
+  - /artworks/unexpected-patterns/03.jpg
 tags: []
 ---
 

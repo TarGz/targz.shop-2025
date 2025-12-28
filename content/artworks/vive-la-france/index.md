@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/vive-la-france/01.jpg
 title: "🇫🇷 Vive La France 🇫🇷"
 slug: vive-la-france
 price: 200
@@ -13,9 +14,9 @@ reference: "2023-07-14-LK2KHH2Q"
 featured: false
 shopify_handle: "vive-la-france"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/vive-la-france/01.jpg
+  - /artworks/vive-la-france/02.jpg
+  - /artworks/vive-la-france/03.jpg
 tags: []
 ---
 

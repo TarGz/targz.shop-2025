@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/chromatic-interplay-n-7-large/01.jpg
 title: "🧬 Chromatic Interplay N°7"
 slug: chromatic-interplay-n-7-large
 price: 400
@@ -13,11 +14,11 @@ reference: "2023-03-04-BS-LEU59HX6Plotter: Custom made Pen PlotterPen: Parallel 
 featured: false
 shopify_handle: "chromatic-interplay-n-7-large"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
-  - ./05.jpg
+  - /artworks/chromatic-interplay-n-7-large/01.jpg
+  - /artworks/chromatic-interplay-n-7-large/02.jpg
+  - /artworks/chromatic-interplay-n-7-large/03.jpg
+  - /artworks/chromatic-interplay-n-7-large/04.jpg
+  - /artworks/chromatic-interplay-n-7-large/05.jpg
 tags: []
 ---
 

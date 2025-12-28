@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/gold-blended-squares-n-20/01.jpg
 title: "🌟 Gold Blended Squares N°20"
 slug: gold-blended-squares-n-20
 price: 200
@@ -13,9 +14,9 @@ reference: "021-C_LxL_CxC2xL_CxC-1"
 featured: false
 shopify_handle: "gold-blended-squares-n-20"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/gold-blended-squares-n-20/01.jpg
+  - /artworks/gold-blended-squares-n-20/02.jpg
+  - /artworks/gold-blended-squares-n-20/03.jpg
 tags: []
 ---
 

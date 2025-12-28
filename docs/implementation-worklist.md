@@ -27,16 +27,16 @@ Based on architecture.md - Phase 1 (MVP)
 - [X] Individual artwork detail page
 - [ ] Checkout success page
 - [ ] Checkout cancel page
-- [ ] About/contact page (optional)
+- [ ] About/contact page will be a link out to this page https://targz.fr/about/
 
 ---
 
 ## 4. Decap CMS
 
-- [ ] Install and configure Decap CMS
-- [ ] Create admin panel at `/admin`
-- [ ] Define collection schema for artworks
-- [ ] Set up Netlify Identity for authentication
+- [X] Install and configure Decap CMS
+- [X] Create admin panel at `/admin`
+- [X] Define collection schema for artworks
+- [X] Set up Netlify Identity for authentication
 
 ---
 

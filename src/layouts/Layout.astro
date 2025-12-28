@@ -17,10 +17,22 @@ const { title = 'Targz ART - Original Pen Plotter Art' } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body>
 		<Header />
 		<slot />
+		<script is:inline>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on("init", user => {
+					if (!user) {
+						window.netlifyIdentity.on("login", () => {
+							document.location.href = "/admin/";
+						});
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
 

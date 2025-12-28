@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/a-duet-of-gold-and-red/01.jpg
 title: "🌕 A Duet of Gold and Red"
 slug: a-duet-of-gold-and-red
 price: 200
@@ -13,9 +14,9 @@ reference: "2023-07-15_BS-LK42GGKW"
 featured: false
 shopify_handle: "a-duet-of-gold-and-red-🌕"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/a-duet-of-gold-and-red/01.jpg
+  - /artworks/a-duet-of-gold-and-red/02.jpg
+  - /artworks/a-duet-of-gold-and-red/03.jpg
 tags: []
 ---
 

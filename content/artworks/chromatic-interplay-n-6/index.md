@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/chromatic-interplay-n-6/01.jpg
 title: "🧬 Chromatic Interplay N°6"
 slug: chromatic-interplay-n-6
 price: 400
@@ -13,10 +14,10 @@ reference: "2023-08-29_BS-LLWOSKAG"
 featured: false
 shopify_handle: "chromatic-interplay-n-6"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
+  - /artworks/chromatic-interplay-n-6/01.jpg
+  - /artworks/chromatic-interplay-n-6/02.jpg
+  - /artworks/chromatic-interplay-n-6/03.jpg
+  - /artworks/chromatic-interplay-n-6/04.jpg
 tags: []
 ---
 

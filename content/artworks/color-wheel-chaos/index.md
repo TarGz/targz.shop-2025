@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/color-wheel-chaos/01.jpg
 title: "🌈 Color Wheel Chaos"
 slug: color-wheel-chaos
 price: 400
@@ -13,11 +14,11 @@ reference: "2023-11-27_BS-LPH6MMNT"
 featured: false
 shopify_handle: "color-wheel-chaos"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
-  - ./05.jpg
+  - /artworks/color-wheel-chaos/01.jpg
+  - /artworks/color-wheel-chaos/02.jpg
+  - /artworks/color-wheel-chaos/03.jpg
+  - /artworks/color-wheel-chaos/04.jpg
+  - /artworks/color-wheel-chaos/05.jpg
 tags: []
 ---
 

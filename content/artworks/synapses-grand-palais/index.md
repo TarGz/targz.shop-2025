@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/synapses-grand-palais/01.png
 title: "Synapses - Grand Palais"
 slug: synapses-grand-palais
 price: 1250
@@ -13,12 +14,12 @@ reference: ""
 featured: false
 shopify_handle: "synapses-grand-palais"
 images:
-  - ./01.png
-  - ./02.png
-  - ./03.png
-  - ./04.png
-  - ./05.png
-  - ./06.png
+  - /artworks/synapses-grand-palais/01.png
+  - /artworks/synapses-grand-palais/02.png
+  - /artworks/synapses-grand-palais/03.png
+  - /artworks/synapses-grand-palais/04.png
+  - /artworks/synapses-grand-palais/05.png
+  - /artworks/synapses-grand-palais/06.png
 tags: []
 ---
 

@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/monochrome-moire-n-1/01.jpg
 title: "✒️ Monochrome Moiré N°1"
 slug: monochrome-moire-n-1
 price: 200
@@ -13,9 +14,9 @@ reference: "2023-09-30_BS-LN6FZHBY-DASHED"
 featured: false
 shopify_handle: "monochrome-moire-n-1"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/monochrome-moire-n-1/01.jpg
+  - /artworks/monochrome-moire-n-1/02.jpg
+  - /artworks/monochrome-moire-n-1/03.jpg
 tags: []
 ---
 

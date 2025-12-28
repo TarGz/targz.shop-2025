@@ -1,0 +1,153 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: content/artworks
+public_folder: /artworks
+
+site_url: https://targz.shop
+display_url: https://targz.shop
+logo_url: /logo.avif
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: artworks
+    label: Artworks
+    label_singular: Artwork
+    folder: content/artworks
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: "/artworks/{{slug}}"
+    format: frontmatter
+    extension: md
+    sortable_fields: [title, price, year, status]
+    summary: "{{title}} - {{price}}EUR ({{status}})"
+    fields:
+      - name: thumbnail
+        label: Thumbnail
+        widget: image
+        required: true
+        hint: Main image shown in listings
+
+      - name: title
+        label: Title
+        widget: string
+        required: true
+
+      - name: slug
+        label: Slug
+        widget: string
+        required: true
+        hint: URL-friendly identifier (e.g., synapse-blue)
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - "Must be lowercase with hyphens only"
+
+      - name: price
+        label: Price (EUR)
+        widget: number
+        value_type: int
+        min: 0
+        required: true
+
+      - name: status
+        label: Status
+        widget: select
+        options:
+          - label: Available
+            value: available
+          - label: Sold
+            value: sold
+        default: available
+        required: true
+
+      - name: images
+        label: Images
+        widget: list
+        required: true
+        min: 1
+        hint: Add artwork images (first image is the main image)
+        field:
+          name: image
+          label: Image
+          widget: image
+          allow_multiple: false
+
+      - name: dimensions
+        label: Dimensions
+        widget: string
+        required: false
+        hint: "e.g., A1 - 594x841mm / 23 x 33 inch"
+
+      - name: technique
+        label: Technique
+        widget: string
+        required: false
+        hint: "e.g., Hand-Signed, Unique Original"
+
+      - name: materials
+        label: Materials
+        widget: string
+        required: false
+        hint: "e.g., Ecoline Watercolor on Clairefontaine cartridge paper (250g/m²)"
+
+      - name: year
+        label: Year
+        widget: number
+        value_type: int
+        min: 2000
+        max: 2100
+        required: false
+
+      - name: reference
+        label: Reference Code
+        widget: string
+        required: false
+        hint: Internal reference identifier
+
+      - name: featured
+        label: Featured
+        widget: boolean
+        default: false
+        required: false
+        hint: Show on homepage featured section
+
+      - name: tags
+        label: Tags
+        widget: list
+        required: false
+        default: []
+        hint: Add tags for categorization
+
+      - name: stripe_product_id
+        label: Stripe Product ID
+        widget: string
+        required: false
+        hint: Stripe product identifier
+
+      - name: stripe_price_id
+        label: Stripe Price ID
+        widget: string
+        required: false
+        hint: Stripe price identifier
+
+      - name: shopify_handle
+        label: Shopify Handle
+        widget: string
+        required: false
+        hint: Original Shopify product handle (for reference)
+
+      - name: body
+        label: Description
+        widget: markdown
+        required: false
+        hint: Artwork description (supports markdown)

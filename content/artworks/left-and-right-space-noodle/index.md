@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/left-and-right-space-noodle/01.jpg
 title: "👾 Left And Right Space Noodle"
 slug: left-and-right-space-noodle
 price: 200
@@ -13,10 +14,10 @@ reference: "2023-03-04-BS-LEU59HX6"
 featured: false
 shopify_handle: "left-and-right-space-noodle"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
+  - /artworks/left-and-right-space-noodle/01.jpg
+  - /artworks/left-and-right-space-noodle/02.jpg
+  - /artworks/left-and-right-space-noodle/03.jpg
+  - /artworks/left-and-right-space-noodle/04.jpg
 tags: []
 ---
 

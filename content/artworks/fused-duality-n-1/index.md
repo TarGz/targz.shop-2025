@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/fused-duality-n-1/01.jpg
 title: "💘 Fused Duality N°1"
 slug: fused-duality-n-1
 price: 400
@@ -13,9 +14,9 @@ reference: "2023-08-25_BS-LLQZ1IY2"
 featured: false
 shopify_handle: "fused-duality-n-1"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/fused-duality-n-1/01.jpg
+  - /artworks/fused-duality-n-1/02.jpg
+  - /artworks/fused-duality-n-1/03.jpg
 tags: []
 ---
 

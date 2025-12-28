@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/chromatic-interplay-n-5/01.jpg
 title: "🧬 Chromatic Interplay N°5"
 slug: chromatic-interplay-n-5
 price: 100
@@ -13,9 +14,9 @@ reference: "2023-06-26_BS-LJCZ58F8"
 featured: false
 shopify_handle: "chromatic-interplay-n-5"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/chromatic-interplay-n-5/01.jpg
+  - /artworks/chromatic-interplay-n-5/02.jpg
+  - /artworks/chromatic-interplay-n-5/03.jpg
 tags: []
 ---
 

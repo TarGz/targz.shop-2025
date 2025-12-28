@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/figure-eight-knot/01.jpg
 title: "🪢 Figure-eight Knot"
 slug: figure-eight-knot
 price: 400
@@ -13,12 +14,12 @@ reference: "2024-03-09_BS-LTK49D8C"
 featured: false
 shopify_handle: "figure-eight-knot"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
-  - ./04.jpg
-  - ./05.jpg
-  - ./06.jpg
+  - /artworks/figure-eight-knot/01.jpg
+  - /artworks/figure-eight-knot/02.jpg
+  - /artworks/figure-eight-knot/03.jpg
+  - /artworks/figure-eight-knot/04.jpg
+  - /artworks/figure-eight-knot/05.jpg
+  - /artworks/figure-eight-knot/06.jpg
 tags: []
 ---
 

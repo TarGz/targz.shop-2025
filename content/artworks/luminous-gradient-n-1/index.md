@@ -1,4 +1,5 @@
 ---
+thumbnail: /artworks/luminous-gradient-n-1/01.jpg
 title: "🪢 Luminous Gradient N°1"
 slug: luminous-gradient-n-1
 price: 400
@@ -13,9 +14,9 @@ reference: "2023-04-22_BS-LGS4Q045"
 featured: false
 shopify_handle: "luminous-gradient-n-1"
 images:
-  - ./01.jpg
-  - ./02.jpg
-  - ./03.jpg
+  - /artworks/luminous-gradient-n-1/01.jpg
+  - /artworks/luminous-gradient-n-1/02.jpg
+  - /artworks/luminous-gradient-n-1/03.jpg
 tags: []
 ---
 
