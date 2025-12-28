@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+	--font-heading: 'Domine', serif;
+	--font-body: 'Open Sans', sans-serif;
+	--color-bg: #f9f9f9;
+	--color-fg: #121212;
+	--color-accent: #ffa9e3;
+	--color-accent-dark: #ec56ee;
+}
+
+html {
+	font-family: var(--font-body);
+	background-color: var(--color-bg);
+	color: var(--color-fg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+	font-weight: 400;
+}

@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const artworks = await getCollection('artworks');
+const available = artworks.filter(a => a.data.status === 'available');
+
+function getImageUrl(artwork: typeof artworks[0]) {
+	const firstImage = artwork.data.images[0];
+	if (!firstImage) return null;
+	const filename = firstImage.replace('./', '');
+	return `/artworks/${artwork.data.slug}/${filename}`;
+}
+---
+
+<Layout>
+	<main>
+		<!-- Hero Section -->
+		<section class="relative h-[60vh] min-h-[400px] bg-gray-900 flex items-center justify-center">
+			<img src="/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" />
+			<div class="absolute inset-0 bg-black/30"></div>
+			<h1 class="relative text-white text-5xl md:text-6xl text-center px-8">Original Pen Plotter Art</h1>
+		</section>
+
+		<!-- Artworks Grid -->
+		<section class="max-w-[1000px] mx-auto px-8 py-16">
+			<p class="text-center mb-12 opacity-60">{available.length} of {artworks.length} artworks available</p>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				{artworks.map((artwork) => {
+					const imageUrl = getImageUrl(artwork);
+					return (
+						<a href={`/artworks/${artwork.data.slug}`} class="group text-center block">
+							<article>
+								<div class="mb-6 overflow-hidden">
+									{imageUrl ? (
+										<img
+											src={imageUrl}
+											alt={artwork.data.title}
+											class="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+										/>
+									) : (
+										<div class="aspect-square bg-gray-200 flex items-center justify-center text-gray-400">
+											{artwork.data.title}
+										</div>
+									)}
+								</div>
+								<h2 class="text-base font-normal mb-1">{artwork.data.title}</h2>
+								<p class="text-sm opacity-70">{artwork.data.price} €</p>
+								{artwork.data.status === 'sold' && (
+									<span class="text-xs opacity-50 mt-1 inline-block">Sold</span>
+								)}
+							</article>
+						</a>
+					);
+				})}
+			</div>
+		</section>
+	</main>
+</Layout>
