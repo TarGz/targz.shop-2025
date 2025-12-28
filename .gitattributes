@@ -1,0 +1,13 @@
+# Artwork files - All Rights Reserved (see COPYRIGHT)
+content/** linguist-documentation
+content/**/*.jpg binary
+content/**/*.png binary
+content/**/*.gif binary
+content/**/*.webp binary
+
+# Code files - MIT License (see LICENSE)
+*.js linguist-detectable
+*.ts linguist-detectable
+*.astro linguist-detectable
+*.css linguist-detectable
+*.json linguist-detectable
