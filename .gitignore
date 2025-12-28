@@ -26,3 +26,4 @@ npm-debug.log*
 
 # Shopify export (keep migrate.js, ignore CSV)
 import/*.csv
+shopify-migration-brief.md
