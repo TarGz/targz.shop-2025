@@ -1,0 +1,144 @@
+---
+// Header component matching Shopify theme
+---
+
+<header class="header">
+  <div class="header__wrapper page-width">
+    <a href="/" class="header__logo">
+      <span class="header__logo-text">TARGZ</span>
+    </a>
+
+    <nav class="header__nav">
+      <a href="/artworks/paper" class="header__nav-link">Paper</a>
+      <a href="/artworks/canvas" class="header__nav-link">Canvas</a>
+      <a href="/about" class="header__nav-link">About</a>
+    </nav>
+
+    <div class="header__icons">
+      <button class="header__icon" aria-label="Search" id="search-toggle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+      <a href="/cart" class="header__icon header__cart" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6h15l-1.5 9h-12z"></path>
+          <circle cx="9" cy="20" r="1"></circle>
+          <circle cx="18" cy="20" r="1"></circle>
+        </svg>
+        <span class="header__cart-count" id="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    background: var(--color-background);
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+    z-index: 100;
+  }
+
+  .header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.4rem;
+    gap: 2rem;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__logo-text {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  .header__nav {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .header__nav-link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .header__nav-link:hover {
+    opacity: 0.7;
+  }
+
+  .header__icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .header__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    color: inherit;
+  }
+
+  .header__cart {
+    position: relative;
+  }
+
+  .header__cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--color-button);
+    color: var(--color-button-text);
+    font-size: 1rem;
+    font-weight: 600;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__cart-count:empty,
+  .header__cart-count[data-count="0"] {
+    display: none;
+  }
+
+  @media (max-width: 749px) {
+    .header__nav {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Update cart count from localStorage
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const count = cart.reduce((sum: number, item: { quantity: number }) => sum + item.quantity, 0);
+    const countEl = document.getElementById('cart-count');
+    if (countEl) {
+      countEl.textContent = String(count);
+      countEl.dataset.count = String(count);
+    }
+  }
+
+  updateCartCount();
+  window.addEventListener('storage', updateCartCount);
+  window.addEventListener('cart-updated', updateCartCount);
+</script>
