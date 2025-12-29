@@ -38,6 +38,10 @@ npm run preview
 
 ## Changelog
 
+### v1.0.1 (2025-12-29)
+
+- White background, light gray navigation bar
+
 ### v1.0.0 (2025-12-29)
 
 - Initial release

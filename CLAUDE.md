@@ -1,0 +1,1 @@
+each time the user ask to commit, increment the version wisely, major, minor or fix, and for manjor and minor push a tag 
