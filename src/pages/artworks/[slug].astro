@@ -52,14 +52,36 @@ const allImages = [
         </div>
 
         <div class="product__info">
+          <p class="product__type">
+            {product.medium === 'paper' ? 'Original Pen-Plotted Artwork' : 'Original Artwork on Canvas'}
+          </p>
           <h1 class="product__title">{product.title}</h1>
-          <p class="product__price">{formatPrice(product.price)}</p>
+
+          {product.description && (
+            <div class="product__description" set:html={product.description} />
+          )}
+
+          {product.sku && (
+            <p class="product__sku">Reference: {product.sku}</p>
+          )}
+
+          <div class="product__price-section">
+            <span class="product__price">{formatPrice(product.price)}</span>
+            {product.status === 'sold' && (
+              <span class="product__badge product__badge--sold">Sold out</span>
+            )}
+          </div>
+          <p class="product__shipping">
+            Taxes included. <a href="/shipping" class="product__shipping-link">Shipping</a> calculated at checkout.
+          </p>
 
           {product.status === 'sold' ? (
-            <p class="product__sold">This piece has been sold</p>
+            <button class="button product__button product__button--sold" disabled>
+              Sold out
+            </button>
           ) : (
             <button
-              class="button product__add-to-cart"
+              class="button product__button product__add-to-cart"
               data-product-id={product.id}
               data-product-title={product.title}
               data-product-price={product.price}
@@ -68,14 +90,6 @@ const allImages = [
             >
               Add to Cart
             </button>
-          )}
-
-          {product.description && (
-            <div class="product__description" set:html={product.description} />
-          )}
-
-          {product.sku && (
-            <p class="product__sku">Reference: {product.sku}</p>
           )}
         </div>
       </div>
@@ -179,52 +193,150 @@ const allImages = [
   }
 
   .product__info {
-    padding-top: 1rem;
+    padding-top: 70px;
+  }
+
+  .product__type {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(18, 18, 18, 0.75);
+    letter-spacing: 0.6px;
+    line-height: 25.2px;
+    margin-top: 0;
+    margin-bottom: 14px;
   }
 
   .product__title {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .product__price {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .product__add-to-cart {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .product__sold {
-    padding: 1.5rem;
-    background: var(--color-background-dark);
-    color: var(--color-foreground-dark);
-    text-align: center;
-    margin-bottom: 2rem;
+    font-family: Domine, serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgb(18, 18, 18);
+    letter-spacing: 0.6px;
+    line-height: 52px;
+    margin: 0;
+    margin-bottom: 24px;
+    word-break: break-word;
   }
 
   .product__description {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(18, 18, 18, 0.08);
-    font-size: 1.4rem;
-    line-height: 1.8;
+    margin-bottom: 24px;
   }
 
-  .product__description :global(p) {
-    margin-bottom: 1rem;
+  .product__description :global(p),
+  .product__description :global(.p1) {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(18, 18, 18, 0.75);
+    letter-spacing: 0.6px;
+    line-height: 25.2px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .product__description :global(p:first-child),
+  .product__description :global(.p1:first-child) {
+    margin-bottom: 20px;
   }
 
   .product__description :global(strong) {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .product__sku {
-    margin-top: 2rem;
-    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(18, 18, 18, 0.75);
+    letter-spacing: 0.6px;
+    line-height: 25.2px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .product__price-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+  }
+
+  .product__price {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #121212;
+  }
+
+  .product__badge {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 12px;
+    border-radius: 40px;
+  }
+
+  .product__badge--sold {
+    background: #E8E8E8;
+    color: #666666;
+  }
+
+  .product__shipping {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 24px;
+  }
+
+  .product__shipping-link {
+    color: #121212;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .product__shipping-link:hover {
+    text-decoration: none;
+  }
+
+  .product__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 122px;
+    height: 47px;
+    min-height: 47px;
+    padding: 0 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: box-shadow 0.1s ease;
+  }
+
+  .product__button--sold {
+    background-color: rgb(18, 18, 18);
+    color: rgb(255, 255, 255);
+    cursor: not-allowed;
     opacity: 0.5;
+  }
+
+  .product__button--sold:hover {
+    opacity: 0.5;
+  }
+
+  .product__add-to-cart {
+    background-color: rgb(18, 18, 18);
+    color: rgb(255, 255, 255);
+  }
+
+  .product__add-to-cart:hover {
+    background-color: #333333;
   }
 </style>
 

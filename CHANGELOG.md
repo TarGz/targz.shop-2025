@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.1] - 2025-12-30
+
+### Changed
+- Product page right section redesigned to match Shopify reference
+- Typography: Domine serif for title, Open Sans for body text
+- Proper spacing between text blocks
+- Product type label above title
+- Price section with sold out badge
+- Shipping text with link
+- Button styles: 5px radius, 47px height, proper disabled state
+
 ## [1.1.0] - 2025-12-30
 
 ### Added
