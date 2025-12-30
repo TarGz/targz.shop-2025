@@ -1,14 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
+import ImageWithText from '../components/ImageWithText.astro';
 import { getProductsByMedium } from '../lib/directus';
 
 const PREVIEW_LIMIT = 4;
 
 const paperProducts = await getProductsByMedium('paper', PREVIEW_LIMIT);
 const canvasProducts = await getProductsByMedium('canvas', PREVIEW_LIMIT);
-const allPaperProducts = await getProductsByMedium('paper');
-const allCanvasProducts = await getProductsByMedium('canvas');
 ---
 
 <Layout title="Shop">
@@ -21,22 +20,21 @@ const allCanvasProducts = await getProductsByMedium('canvas');
 
   <section class="collection section">
     <div class="page-width">
-      <header class="collection__header">
-        <h2 class="collection__title">Paper Artworks</h2>
-        <p class="collection__count">{allPaperProducts.length} pieces</p>
-      </header>
+      <ImageWithText
+        image="/images/paper.jpg"
+        imageAlt="Paper artworks collection"
+        title="Pen Plotter Art ❤️"
+        description="Pen Plotted art pieces made with love on a custom-made pen plotter in Paris"
+        buttonText="Explore Editions"
+        buttonLink="/artworks/paper"
+        imagePosition="right"
+      />
 
       <div class="product-grid">
         {paperProducts.map((product) => (
           <ProductCard product={product} />
         ))}
       </div>
-
-      {allPaperProducts.length > PREVIEW_LIMIT && (
-        <div class="collection__more">
-          <a href="/artworks/paper" class="btn btn--outline">View all paper artworks</a>
-        </div>
-      )}
 
       {paperProducts.length === 0 && (
         <p class="collection__empty">No paper artworks available at the moment.</p>
@@ -46,22 +44,21 @@ const allCanvasProducts = await getProductsByMedium('canvas');
 
   <section class="collection section">
     <div class="page-width">
-      <header class="collection__header">
-        <h2 class="collection__title">Canvas Artworks</h2>
-        <p class="collection__count">{allCanvasProducts.length} pieces</p>
-      </header>
+      <ImageWithText
+        image="/images/canvas.jpg"
+        imageAlt="Canvas artworks collection"
+        title="Premium Canvas 🔥"
+        description="Unique and exclusive and durable pieces plotted on high quality canvas and frame on Floater frames"
+        buttonText="Explore Originals"
+        buttonLink="/artworks/canvas"
+        imagePosition="left"
+      />
 
       <div class="product-grid">
         {canvasProducts.map((product) => (
           <ProductCard product={product} />
         ))}
       </div>
-
-      {allCanvasProducts.length > PREVIEW_LIMIT && (
-        <div class="collection__more">
-          <a href="/artworks/canvas" class="btn btn--outline">View all canvas artworks</a>
-        </div>
-      )}
 
       {canvasProducts.length === 0 && (
         <p class="collection__empty">No canvas artworks available at the moment.</p>
@@ -90,56 +87,14 @@ const allCanvasProducts = await getProductsByMedium('canvas');
     margin: 0 auto;
   }
 
-  .collection__header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
-  }
-
-  .collection__title {
-    font-size: 2rem;
-  }
-
-  .collection__count {
-    font-size: 1.3rem;
-    opacity: 0.6;
-  }
-
   .collection__empty {
     text-align: center;
     padding: 4rem;
     opacity: 0.6;
   }
 
-  .collection__more {
-    text-align: center;
-    margin-top: 3rem;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 1.2rem 3rem;
-    font-size: 1.3rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 0;
-    transition: all 0.2s ease;
-    cursor: pointer;
-  }
-
-  .btn--outline {
-    background: transparent;
-    border: 1px solid var(--color-foreground);
-    color: var(--color-foreground);
-  }
-
-  .btn--outline:hover {
-    background: var(--color-foreground);
-    color: var(--color-background);
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   @media (max-width: 749px) {
@@ -149,6 +104,10 @@ const allCanvasProducts = await getProductsByMedium('canvas');
 
     .hero {
       padding: 4rem 0;
+    }
+
+    .product-grid {
+      grid-template-columns: 1fr !important;
     }
   }
 </style>

@@ -36,25 +36,6 @@ npm run preview
 
 ---
 
-## Changelog
-
-### v1.0.1 (2025-12-29)
-
-- White background, light gray navigation bar
-
-### v1.0.0 (2025-12-29)
-
-- Initial release
-- Homepage with Paper and Canvas sections
-- Product detail pages
-- Directus CMS integration
-- Product filtering by medium (paper/canvas)
-- Sold badge on sold artworks
-- Responsive design matching Shopify theme
-- Image imports from targz.fr
-
----
-
 ## TODO
 
 - [ ] Cart functionality (localStorage + Preact island)
