@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2] - 2025-12-30
+
+### Changed
+- Header logo: replaced text with image (targz-art-pen-plotter-logo.jpg)
+- Homepage hero: new banner with hero image
+- Button text: "Explore Editions" changed to "Explore Originals"
+- ImageWithText component: improved padding (25% on both sides) for better alignment
+
 ## [1.1.1] - 2025-12-30
 
 ### Changed
