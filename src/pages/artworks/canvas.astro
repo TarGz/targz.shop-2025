@@ -1,18 +1,22 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import ImageWithText from '../../components/ImageWithText.astro';
 import { getProductsByMedium } from '../../lib/directus';
 
 const products = await getProductsByMedium('canvas');
 ---
 
-<Layout title="Canvas Artworks">
+<Layout title="On Canvas">
   <section class="collection section">
     <div class="page-width">
-      <header class="collection__header">
-        <h1 class="collection__title">Canvas Artworks</h1>
-        <p class="collection__count">{products.length} pieces</p>
-      </header>
+      <ImageWithText
+        image="/images/canvas.jpg"
+        imageAlt="Pen plotter artwork on canvas"
+        title="Pen Plotted On Canvas 🔥"
+        description="Premium pen plotted artworks on high quality canvas, mounted on elegant floater frames"
+        imagePosition="left"
+      />
 
       <div class="product-grid">
         {products.map((product) => (
@@ -28,27 +32,23 @@ const products = await getProductsByMedium('canvas');
 </Layout>
 
 <style>
-  .collection__header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
-  }
-
-  .collection__title {
-    font-size: 2.4rem;
-  }
-
-  .collection__count {
-    font-size: 1.3rem;
-    opacity: 0.6;
-  }
-
   .collection__empty {
     text-align: center;
     padding: 4rem;
     opacity: 0.6;
+  }
+
+  /* Override ImageWithText styles for category pages */
+  .collection :global(.image-with-text__content) {
+    padding: 3rem 10% 3rem 5%;
+  }
+
+  .collection :global(.image-with-text__heading) {
+    font-size: 3.4rem;
+    white-space: nowrap;
+  }
+
+  .collection :global(.image-with-text__text) {
+    font-size: 1.6rem;
   }
 </style>

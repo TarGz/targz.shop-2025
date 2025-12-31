@@ -4,8 +4,8 @@ interface Props {
   imageAlt?: string;
   title: string;
   description: string;
-  buttonText: string;
-  buttonLink: string;
+  buttonText?: string;
+  buttonLink?: string;
   imagePosition?: 'left' | 'right';
 }
 
@@ -27,7 +27,9 @@ const {
   <div class="image-with-text__content">
     <h2 class="image-with-text__heading">{title}</h2>
     <p class="image-with-text__text">{description}</p>
-    <a href={buttonLink} class="image-with-text__button">{buttonText}</a>
+    {buttonText && buttonLink && (
+      <a href={buttonLink} class="image-with-text__button">{buttonText}</a>
+    )}
   </div>
 </div>
 

@@ -35,7 +35,7 @@ const canvasProducts = await getProductsByMedium('canvas', PREVIEW_LIMIT);
         imageAlt="Paper artworks collection"
         title="Pen Plotter Art ❤️"
         description="Pen Plotted art pieces made with love on a custom-made pen plotter in Paris"
-        buttonText="Explore Originals"
+        buttonText="Explore Bristols"
         buttonLink="/artworks/paper"
         imagePosition="right"
       />
@@ -59,7 +59,6 @@ const canvasProducts = await getProductsByMedium('canvas', PREVIEW_LIMIT);
         imageAlt="Canvas artworks collection"
         title="Premium Canvas 🔥"
         description="Unique and exclusive and durable pieces plotted on high quality canvas and frame on Floater frames"
-        buttonText="Explore Originals"
         buttonLink="/artworks/canvas"
         imagePosition="left"
       />
@@ -83,7 +82,7 @@ const canvasProducts = await getProductsByMedium('canvas', PREVIEW_LIMIT);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 400px;
+    height: 500px;
     isolation: isolate;
   }
 
@@ -94,6 +93,16 @@ const canvasProducts = await getProductsByMedium('canvas', PREVIEW_LIMIT);
     width: 100%;
     height: 100%;
     overflow: hidden;
+  }
+
+  .banner__media::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .banner__image {

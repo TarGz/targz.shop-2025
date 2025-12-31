@@ -78,7 +78,13 @@ button {
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 4rem;
+}
+
+@media (max-width: 749px) {
+  .page-width {
+    padding: 0 1.5rem;
+  }
 }
 
 .section {
@@ -131,7 +137,7 @@ button {
 
 @media (min-width: 990px) {
   .product-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

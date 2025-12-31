@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.2.0] - 2025-12-30
+
+### Added
+- Category pages now use ImageWithText header component
+- Dark overlay on homepage banner
+
+### Changed
+- Navigation renamed: "On Bristol" and "On Canvas"
+- Header increased height (9rem) and logo size (55px) for more breathing room
+- Page-width padding increased to 4rem on desktop
+- Homepage banner height increased to 500px
+- Homepage buttons: "Explore Bristols" and "Explore Canvas" (hidden)
+- Category headers: "Pen Plotted On Bristol/Canvas" with larger text
+- Product grid now 3 columns instead of 4
+- Product page main image displays at full height
+
 ## [1.1.2] - 2025-12-30
 
 ### Changed
