@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0] - 2025-12-31
+
+### Added
+- Cart page with two-column layout
+- Cart component (Preact) with localStorage persistence
+- Reassurance blocks sidebar: packaging, shipping, secure payment, authenticity, contact
+- Unique pieces: items can only be added once (no quantity controls)
+
+### Changed
+- Add-to-cart shows "Already in cart" if item exists
+- Header cart count shows number of items (not quantities)
+
 ## [1.2.0] - 2025-12-30
 
 ### Added

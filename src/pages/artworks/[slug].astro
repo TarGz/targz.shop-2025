@@ -367,7 +367,7 @@ const allImages = [
     if (e.key === 'Escape') closeLightbox();
   });
 
-  // Add to cart
+  // Add to cart (unique pieces only)
   document.querySelector('.product__add-to-cart')?.addEventListener('click', (e) => {
     const btn = e.currentTarget as HTMLButtonElement;
     const product = {
@@ -376,22 +376,23 @@ const allImages = [
       price: parseInt(btn.dataset.productPrice || '0'),
       image: btn.dataset.productImage,
       slug: btn.dataset.productSlug,
-      quantity: 1,
     };
 
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const existing = cart.find((item: { id: string }) => item.id === product.id);
 
     if (existing) {
-      existing.quantity += 1;
-    } else {
-      cart.push(product);
+      btn.textContent = 'Already in cart';
+      setTimeout(() => {
+        btn.textContent = 'Add to Cart';
+      }, 1500);
+      return;
     }
 
+    cart.push(product);
     localStorage.setItem('cart', JSON.stringify(cart));
     window.dispatchEvent(new Event('cart-updated'));
 
-    // Feedback
     btn.textContent = 'Added!';
     setTimeout(() => {
       btn.textContent = 'Add to Cart';

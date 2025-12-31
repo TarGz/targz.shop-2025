@@ -1,0 +1,318 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cart from '../components/Cart';
+
+const directusUrl = import.meta.env.DIRECTUS_URL || 'http://167.86.73.162:8055';
+---
+
+<Layout title="Cart" description="Your shopping cart">
+  <section class="cart-page section">
+    <div class="page-width">
+      <h1 class="cart-page__title">Your Cart</h1>
+
+      <div class="cart-layout">
+        <div class="cart-layout__main">
+          <Cart client:load directusUrl={directusUrl} />
+        </div>
+
+        <aside class="cart-layout__sidebar">
+          <div class="reassurance">
+            <div class="reassurance__block">
+              <div class="reassurance__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <div class="reassurance__content">
+                <h3 class="reassurance__title">Careful Packaging</h3>
+                <p class="reassurance__text">Bristol works shipped rolled in protective tubes. Canvas pieces professionally crated for maximum protection.</p>
+              </div>
+            </div>
+
+            <div class="reassurance__block">
+              <div class="reassurance__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="1" y="3" width="15" height="13" rx="2"/>
+                  <path d="M16 8h4a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
+              <div class="reassurance__content">
+                <h3 class="reassurance__title">Worldwide Shipping</h3>
+                <p class="reassurance__text">Shipping costs calculated at checkout based on your location. Tracked delivery with insurance included.</p>
+              </div>
+            </div>
+
+            <div class="reassurance__block">
+              <div class="reassurance__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+              <div class="reassurance__content">
+                <h3 class="reassurance__title">Secure Payment</h3>
+                <p class="reassurance__text">All transactions processed securely via Stripe. Your payment information is never stored on our servers.</p>
+              </div>
+            </div>
+
+            <div class="reassurance__block">
+              <div class="reassurance__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <div class="reassurance__content">
+                <h3 class="reassurance__title">Authenticity Guaranteed</h3>
+                <p class="reassurance__text">Each piece is an original, one-of-a-kind artwork. Signed and numbered by the artist.</p>
+              </div>
+            </div>
+
+            <div class="reassurance__block">
+              <div class="reassurance__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="reassurance__content">
+                <h3 class="reassurance__title">Questions?</h3>
+                <p class="reassurance__text">Need help or have special requests? <a href="mailto:hello@targz.shop">Contact us</a> — we're happy to assist.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  .cart-page__title {
+    margin-bottom: 3rem;
+  }
+
+  /* Two-column layout */
+  .cart-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .cart-layout__main {
+    min-width: 0;
+  }
+
+  .cart-layout__sidebar {
+    position: sticky;
+    top: 10rem;
+  }
+
+  /* Reassurance blocks */
+  .reassurance {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .reassurance__block {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f0f0f0;
+    border-radius: 8px;
+  }
+
+  .reassurance__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .reassurance__icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: #121212;
+  }
+
+  .reassurance__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .reassurance__title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .reassurance__text {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #666;
+  }
+
+  .reassurance__text a {
+    color: #121212;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .reassurance__text a:hover {
+    opacity: 0.7;
+  }
+
+  /* Responsive */
+  @media (max-width: 999px) {
+    .cart-layout {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .cart-layout__sidebar {
+      position: static;
+      order: 2;
+    }
+  }
+
+  /* Cart container */
+  .cart {
+    max-width: none;
+  }
+
+  .cart--loading {
+    text-align: center;
+    padding: 4rem;
+    opacity: 0.6;
+  }
+
+  .cart--empty {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .cart__empty-message {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .cart__items {
+    border-top: 1px solid rgba(18, 18, 18, 0.08);
+  }
+
+  /* Cart item row */
+  .cart-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto auto;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+  }
+
+  .cart-item__image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background: #f7f7f7;
+  }
+
+  .cart-item__details {
+    min-width: 0;
+  }
+
+  .cart-item__title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .cart-item__title:hover {
+    opacity: 0.7;
+  }
+
+  .cart-item__price {
+    font-weight: 500;
+    font-size: 1.5rem;
+    min-width: 80px;
+    text-align: right;
+  }
+
+  .cart-item__remove {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    opacity: 0.5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-item__remove:hover {
+    opacity: 1;
+  }
+
+  /* Cart summary */
+  .cart__summary {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(18, 18, 18, 0.1);
+  }
+
+  .cart__total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .cart__total-label {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .cart__total-value {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .cart__shipping-note {
+    font-size: 1.3rem;
+    color: #666666;
+    margin-bottom: 2rem;
+  }
+
+  .cart__checkout {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+  }
+
+  /* Responsive cart items */
+  @media (max-width: 749px) {
+    .cart-item {
+      grid-template-columns: 80px 1fr auto auto;
+      gap: 1rem 1.5rem;
+    }
+
+    .cart-item__image {
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>

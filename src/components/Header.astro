@@ -128,7 +128,7 @@
   // Update cart count from localStorage
   function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const count = cart.reduce((sum: number, item: { quantity: number }) => sum + item.quantity, 0);
+    const count = cart.length;
     const countEl = document.getElementById('cart-count');
     if (countEl) {
       countEl.textContent = String(count);
